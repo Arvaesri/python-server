@@ -12,7 +12,7 @@ body {
   width: 60%;
   min-width: 650px;
   padding: 20px;
-  background-color: #fff;
+  background-color: rgb(156, 156, 156);
 }
 
 .details-box .info-table {

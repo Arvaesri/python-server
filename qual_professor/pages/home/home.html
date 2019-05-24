@@ -1,11 +1,36 @@
 <div class="body-box">
     <div class="info-box">
         <div style="width: 100px;"></div>
-        <img src="qual_professor/assets/Yin_yang.svg" width="100" alt="">
+        <img src= "https://www.reactiongifs.com/r/the4se.gif" id ="imagem" width="200" alt="">
         <div>
             <p>Nome: Algu&eacute;m ai</p>
             <p>Turma: Alguma</p> 
-            <button type="button">Ver detalhes</button>
+            
+
+            <body> 
+                <button onclick = "alteragif2()" type="button"><</button>
+                <button onclick = "paginaDetalhes()" class="button button2">ver detalhes</button>
+                <button onclick = "alteragif()" class="button button3">></button>
+
+            </body>
+            
+            <script>
+            var gifs = ["https://www.reactiongifs.com/r/the4se.gif","https://pa1.narvii.com/6698/affc201f1489078db8482ffe8744cb12562bed5f_00.gif"]
+
+            function paginaDetalhes() {
+                window.location.href = "/details"
+            }
+            
+            function alteragif(){
+            
+            document.getElementById("imagem").src = gifs [1]
+            }
+
+
+            function alteragif2() {
+            document.getElementById("imagem").src = gifs [0]
+        }
+            </script>
         </div>
     </div>
 </div>

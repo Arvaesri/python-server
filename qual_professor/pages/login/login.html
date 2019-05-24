@@ -1,8 +1,19 @@
 <div class="content-box">
     <div class="login-box">
         <!-- <img src="assets/600px-Yin_yang.svg.png" alt="alguma coisa" width="100" /> -->
-        <p>Digite a frase secreta...</p>
-        <input type="text" onblur="getPassword" />
-        <button>Acessar</button>
+        <p>Digite a Palavra Passe...</p>
+        <input type="password" id = "Thanos" onblur="Proximapagina()"/>
+        <button onclick ="proximaPagina()">Acessar</button>
+
+
+<script>
+    function proximaPagina() {
+    var senha = document.getElementById("Thanos")
+    senha = senha.value
+    if (senha == "palavra passe") {
+        window.location.href = "/home"
+    }
+}
+</script>
     </div>
 </div>

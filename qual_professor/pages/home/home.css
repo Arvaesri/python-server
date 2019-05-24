@@ -15,7 +15,7 @@ body {
     flex-flow: column nowrap;
     padding: 10px;
     border: thin solid #000;
-    background-color: #9e42f4;
+    background-color: #bbb8b8;
     width: 350px;
 }
 
@@ -23,7 +23,24 @@ body {
     padding: 10px;
     cursor: pointer;
     color: #FFF;
-    background-color: #412c49;
+    background-color: #0f0e0f;
     border: none;
     border-radius: 4px;
 }
+.button {
+    background-color: rgb(28, 32, 28); /* Green */
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  
+  .button2 {border-radius: 8px;}
+  .button3 {border-radius: 8px;}
+  
+

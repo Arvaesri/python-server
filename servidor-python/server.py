@@ -16,7 +16,7 @@ print('Iniciando servidor na porta', server_address[1])
 sock.bind(server_address)
 
 # Listen for incoming connections
-sock.listen(1)
+sock.listen(3)
 
 while True:
     connection, client_address = sock.accept()
@@ -37,23 +37,23 @@ while True:
             elif '/details' == datas[1]:
                 html_bytes = getBytesDistHtml('details')
                 connection.sendall(html_bytes)
-            elif '/icon' == datas[1]:
-                obj = { 'name': 'Alguém ai', 'idade': 23 }
-                msg = json.dumps(obj).encode('utf-8')
-                frmt = "=%ds" % len(msg)
-                packedMsg = struct.pack(frmt, msg)
-                packedHdr = struct.pack('=I', len(packedMsg))
+            # elif '/icon' == datas[1]:
+            #     obj = { 'name': 'Alguém ai', 'idade': 23 }
+            #     msg = json.dumps(obj).encode('utf-8')
+            #     frmt = "=%ds" % len(msg)
+            #     packedMsg = struct.pack(frmt, msg)
+            #     packedHdr = struct.pack('=I', len(packedMsg))
     
-                print(packedMsg)
-                print(packedHdr)
+            #     print(packedMsg)
+            #     print(packedHdr)
                 # self._send(packedHdr)
                 # self._send(packedMsg)
-                sent = 0
-                sent2 = 0
-                while sent < len(packedHdr):
-                    sent += connection.send(packedHdr[sent:])
-                while sent2 < len(packedMsg):
-                    sent2 += connection.send(packedMsg[sent2:])
+                # sent = 0
+                # sent2 = 0
+                # while sent < len(packedHdr):
+                #     sent += connection.send(packedHdr[sent:])
+                # while sent2 < len(packedMsg):
+                #     sent2 += connection.send(packedMsg[sent2:])
             #     # O id
             #     parameter_string[2]
             #     response = 'HTTP/1.0 200 OK\r\nContent-Type: image/jpg\r\nContent-Length: ' + str(len(getStringIcon())) + '\r\n\r\n', getStringIcon()
