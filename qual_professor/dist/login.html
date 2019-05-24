@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+    <head>
+<style type="text/css">
+body {
+    background-color: #000;
+}
+
+.content-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50vh;
+}
+
+.login-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
+    border: thin solid rgb(133, 131, 131);
+    background-color: #AAA;
+    border-radius: 3px;
+    height: fit-content;
+    padding: 20px;
+    flex-flow: column wrap;
+}
+
+.login-box input {
+    width: 150px;
+    border: thin solid #000;
+    padding: 5px 10px;
+}
+
+.login-box button {
+    cursor: pointer;
+    background-color: #000;
+    border: thin solid #000;
+    border-radius: 5px;
+    color: #FFF;
+    margin-top: 20px;
+    width: 170px;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.login-box button:hover {
+    color: #000;
+    background-color: #FFF;
+    border-color: #000;
+    transition: 0.3s;
+}
+</style>
+<script type="text/javascript">
+function getPassword(e) {
+    console.log(e.target.value)
+}
+console.log('tou rodando bixo')
+</script>
+
+        <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+        <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSxOe5jarPxmfbtn-rNDxxPoHBed5UR1Cjh2No-QWq6olfMZ7ZaA">
+        <title>Qual professor</title>
+        <link href="https://fonts.googleapis.com/css?family=Merriweather|Stylish" rel="stylesheet">
+        <style type="text/css">
+            body {
+                font-family: Merriweather, monospace;
+                font-size: 0.9em;
+            }
+        </style>
+    </head>
+    <body><div class="content-box">
+    <div class="login-box">
+        <!-- <img src="assets/600px-Yin_yang.svg.png" alt="alguma coisa" width="100" /> -->
+        <p>Digite a Palavra Passe...</p>
+        <input type="password" id = "Thanos" onblur="Proximapagina()"/>
+        <button onclick ="proximaPagina()">Acessar</button>
+
+
+<script>
+    function proximaPagina() {
+    var senha = document.getElementById("Thanos")
+    senha = senha.value
+    if (senha == "palavra passe") {
+        window.location.href = "/home"
+    }
+}
+</script>
+    </div>
+</div>
+    </body>
+</html>
